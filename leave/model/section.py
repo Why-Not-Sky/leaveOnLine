@@ -46,20 +46,23 @@ if __name__ == "__main__":
     w = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,12,00)) #work1
     lo = Section(datetime(2015,1,1,10,30), datetime(2015,1,1,12,00)) #intersection
     lc = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,17,30)) #cover
-    ln = Section(datetime(2015,1,1,12,30), datetime(2015,1,1,14,00)) #none
+    ln = Section(datetime(2015,1,2,12,30), datetime(2015,1,2,14,00)) #none
+    lc2 = Section(datetime(2015,1,1,10,30), datetime(2015,1,1,11,30)) #2 card time section
 
-    print('w1=', w.dump())
+    wlist=w.difference(lc2)
+    for w in wlist: print('wlist.%d=' % wlist.index(w), w.dump())
 
     lo1=lo.intersection(w)
     #print (lo.dump, 'intersection w=', lo1.dump() if lo1 is not None)
-    print (lo.dump(), 'intersection w=')
-    if lo1 is not None: print('\t', lo1.dump())
+    print (lo.dump(), 'intersection w=', lo1.dump() if lo1 is not None else None)  #'Test is True' if test else 'Test is False'
 
     lc1=lc.intersection(w)
-    print (lc.dump(), 'contain w=')
-    if lc1 is not None: print('\t', lc1.dump())
+    print (lc.dump(), 'contain w=', lc1.dump() if lc1 is not None else None)
+    #if lc1 is not None: print('\t', lc1.dump())
 
     ln1=ln.intersection(w)
-    print (ln.dump(), 'intersection w=')
-    if ln1 is not None: print('\t', ln1.dump())
-    else: print('\t', 'None')
+    print (ln.dump(), 'intersection w=', ln1.dump() if ln1 is not None else None)
+    #if ln1 is not None: print('\t', ln1.dump())
+    #else: print('\t', 'None')
+
+

@@ -28,21 +28,5 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="Python 3.4.2 virtualenv at C:\Users\sky_wu\python 3.4.2" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>Python 2.7.9 virtualenv at ~/python2.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
-  </component>
 </project>
 

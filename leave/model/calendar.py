@@ -1,4 +1,3 @@
-from datetime import datetime, timedelta
 from self_datetime import get_calendar_date
 
 class Calendar:
