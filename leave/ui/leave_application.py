@@ -2,7 +2,7 @@ from datetime import datetime
 import functools
 #https://docs.python.org/3.0/library/time.html#time.strptime
 
-class Section:
+class LeaveApplication:
     def __init__(self, sdt, edt):
         self.start_point=sdt
         self.end_point=edt

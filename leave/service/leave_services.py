@@ -12,7 +12,7 @@ getCalendar:
 """
 from model.section import *
 
-class leave_services:
+class LeaveServices:
     def __init__(self):
       pass
 

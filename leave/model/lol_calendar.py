@@ -1,6 +1,7 @@
-from self_datetime import get_calendar_date
+#from self_datetime import get_calendar_date
+from datetime import datetime
 
-class Calendar:
+class myCalendar:
     except_date=[datetime(2015, 2, i) for i in range(18, 25)]  #not include 25
     #test tuples
     #except_date=(datetime(2015, 2, i) for i in range(18, 25))  #not include 25
@@ -22,7 +23,7 @@ if __name__ == "__main__":
     work_year = 2015
     work_month = 2
 
-    wc = Calendar(work_year, work_month)
+    wc = myCalendar(work_year, work_month)
     for d in wc.work_date: print(d.strftime("%Y/%m/%d"), d.weekday())
     for d in wc.except_date: print(d.strftime("%Y/%m/%d"))
     #print(wc.except_date)
