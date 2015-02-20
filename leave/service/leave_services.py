@@ -19,7 +19,7 @@ class leave_services:
     def is_leave_validate(self, applicant_id, from_date, to_date):
         pass
 
-    def is_leave_overlap(self, applicant_id, from_date, to_date):
+    def is_leave_duplicated(self, applicant_id, from_date, to_date):
         return(False)
 
     def calculate_leave(self, applicant_id, from_date, to_date):

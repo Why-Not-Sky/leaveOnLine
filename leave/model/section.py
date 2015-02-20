@@ -23,11 +23,13 @@ class Section:
         :param co:     |------|
         :return:   |---|      |----|
         """
+        res=[]
         if (self.start_point < co.end_point and self.end_point > co.start_point):
-            res=[]
             if (self.start_point < co.start_point): res.append(Section(self.start_point, co.start_point))
             if (self.end_point > co.end_point): res.append(Section(co.end_point, self.end_point))
             return (res)
+        else:
+            return(res.append(self))   #no intersection return self
 
     def distance(self):  #datetime.timedelta
         #to-do: use type to decide return type, return hours first
@@ -43,7 +45,13 @@ class Section:
 
 if __name__ == "__main__":
     # Create an object:
-    w = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,12,00)) #work1
+    work_sheet = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,17,30)) #work1
+    rest_time = Section(datetime(2015,1,1,12,00), datetime(2015,1,1,13,00)) #rest time
+    work_time = work_sheet.difference(rest_time)
+    for w in work_time: print('work_time.%d=' % work_time.index(w), w.dump())
+
+    w=work_time[0]
+
     lo = Section(datetime(2015,1,1,10,30), datetime(2015,1,1,12,00)) #intersection
     lc = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,17,30)) #cover
     ln = Section(datetime(2015,1,2,12,30), datetime(2015,1,2,14,00)) #none

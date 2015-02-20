@@ -31,7 +31,7 @@ class Section:
 if __name__ == "__main__":
     w1 = Section(datetime(2015,1,1,8,30), datetime(2015,1,1,12,00)) #work1
     w2 = Section(datetime(2015,1,1,13,00), datetime(2015,1,1,17,30)) #work2
-    w3 = Section(datetime(2015,1,2,8,30), datetime(2015,1,2,12,00)) #work1
+    w3 = Section(datetime(2015,1,2,8,30), datetime(2015,1,2,12,00)) #work3
 
     lev = Section(datetime(2015,1,1,10,30), datetime(2015,1,1,16,00)) #leave answer: 4.5hour
 
